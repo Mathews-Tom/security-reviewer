@@ -1,0 +1,32 @@
+spec_version: "0.1.0"
+name: security-reviewer
+version: "1.0.0"
+description: >
+  OWASP Top 10 vulnerability scanner — maps attack surfaces, traces data flows
+  from entry points to sinks, produces severity-ranked findings with exploit
+  scenarios and remediation code
+license: MIT
+
+model:
+  preferred: claude-sonnet-4-5-20250929
+  fallback:
+    - claude-haiku-4-5-20251001
+  constraints:
+    temperature: 0.4
+    max_tokens: 16384
+
+skills: []
+
+runtime:
+  max_turns: 50
+  timeout: 600
+
+tags:
+  - security
+  - owasp
+  - vulnerability-scanner
+  - sql-injection
+  - xss
+  - authentication
+  - ssrf
+  - code-audit
